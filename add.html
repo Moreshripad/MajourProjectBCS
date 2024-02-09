@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>E-Mall-OnlineShopping-website</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <style>
+      .smallwidthforimg {
+        width: 40px;
+      }
+      .a {
+        color: azure;
+      }
+      .navbar-low {
+        padding: 0 10px;
+      }
+      /* .js {
+      } */
+
+      #search {
+        border-radius: 10px 0px;
+        outline: none;
+        border: none;
+        padding: 6px 10px;
+      }
+      .io {
+        border: none;
+        padding: 6px 10px;
+        /* border-radius: 50%; */
+        background-color: rgb(255, 255, 255);
+      }
+      .ab {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 68%;
+      }
+      /* .pos {
+        position: fixed;
+        top: 0px;
+        width: 100%;
+      } */
+      #hdown {
+        height: 100vh;
+      }
+      .changenav {
+        color: white;
+        letter-spacing: 10px;
+        font-weight: bolder;
+        top: 10px;
+        position: relative;
+      }
+      .at {
+        color: gold;
+      }
+      .shoping {
+        width: 35px;
+      }
+      .newheight {
+        height: 500px;
+      }
+      #ls {
+        letter-spacing: 3px;
+      }
+      .scale-zoom {
+        transition: all ease-in-out 1s;
+      }
+      .scale-zoom:hover {
+        transform: scale(1.2);
+        transition: all ease-in-out 0.2s;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- this is the header file -->
+
+    <!-- header start here... -->
+    <nav class="navbar navbar-expand-lg bg-warning">
+      <div class="container navbar-low">
+        <a class="navbar-brand" href="#"
+          ><img
+            class="img-fluid smallwidthforimg"
+            src="ASSETS/Shopping.png"
+            alt="shopping image"
+        /></a>
+        <div>
+          <h1 class="changenav">E-Mall</h1>
+        </div>
+        <button
+          class="navbar-toggler shadow-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse d-flex justify-content-center"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav a ab">
+            <div class="d-lg-flex">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="emall.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item a">
+                <a class="nav-link" href="" style="scroll-behavior: smooth"
+                  >About us</a
+                >
+              </li>
+              <li class="nav-item a">
+                <a class="nav-link" href="#">Services</a>
+              </li>
+              <li class="nav-item a">
+                <a class="nav-link" href="#">Contact us</a>
+              </li>
+            </div>
+            <div class="">
+              <li>
+                <input
+                  type="search"
+                  name="search"
+                  id="search"
+                  placeholder="Search here..."
+                />
+                <button class="io" type="submit">
+                  <i class="bi bi-search"></i>
+                </button>
+              </li>
+            </div>
+          </ul>
+        </div>
+        <!-- Registration form -->
+        <button
+          type="button"
+          class="btn btn-danger"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+          data-bs-whatever="@mdo"
+        >
+          Register
+        </button>
+
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                  New message
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3 row">
+                    <label for="staticEmail" class="col-sm-2 col-form-label"
+                      >Email</label
+                    >
+                    <div class="col-sm-10">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="staticEmail"
+                        value=""
+                        placeholder="Enter your E-mail"
+                      />
+                    </div>
+                  </div>
+                  <div class="mb-3 row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label"
+                      >Password</label
+                    >
+                    <div class="col-sm-10">
+                      <input
+                        type="password"
+                        required
+                        class="form-control"
+                        id="inputPassword"
+                        placeholder="Enter your password"
+                      />
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-success">Register</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- header end here... -->
+
+    <!-- carousel slider -->
+    <div id="carouselExampleFade" class="carousel slide carousel-fade">
+      <div class="carousel-inner">
+        <div class="carousel-item active" id="hdown">
+          <img
+            src="ASSETS/emallimg4.jpg"
+            class="d-block w-100 using"
+            alt="..."
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleFade"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleFade"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- about us -->
+    <div class="container-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg">
+            <a href="about"><h1 class="text-center mt-5 mb-5">About Us</h1></a>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6">
+                <h1>Shoe park</h1>
+                <br />
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicin1g elit.
+                  Consectetur atque fugiat, asperiores quia earum ea veritatis
+                  temporibus dolorem magni beatae. Lorem ipsum dolor sit amet
+                  consectetur adipisicing elit. Accusantium debitis at qui
+                  dolorem dignissimos beatae aut adipisci repellendus sapiente,
+                  impedit, facilis esse blanditiis sint consequatur possimus
+                  cumque officia velit unde?
+                </p>
+                <br />
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Earum iusto esse perferendis itaque consequatur repellat,
+                  quam, error corrupti, debitis facere ut doloribus? Esse
+                  expedita tempore et praesentium tempora nostrum? Non.
+                </p>
+              </div>
+              <div class="col-lg-6">
+                <img
+                  class="img-fluid shoehover scale-zoom"
+                  src="ASSETS/nike_shoe.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- services -->
+    <div class="container-fluid">
+      <div class="container">
+        <div class="row text-center mt-5 mb-5">
+          <h1>Services</h1>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <h1>Services Point</h1>
+            <br />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+              dolorum incidunt ipsam ullam commodi aspernatur a temporibus
+              sapiente, minima libero impedit aliquam? Harum odio aut sunt optio
+              nobis possimus. Cupiditate?
+            </p>
+            <br />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+              dolorem qui voluptate quia laboriosam? Itaque similique debitis
+              reprehenderit quas magnam blanditiis, dolor eveniet adipisci
+              reiciendis soluta deleniti asperiores voluptatem perferendis.
+            </p>
+            <br /><br />
+            <h3>Comming soon...</h3>
+          </div>
+          <div class="col-lg-6 d-flex justify-content-center align-item-center">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/O-JXUhhIRHU?si=EFC0oTdjPxxxnG2x"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="container mt-3">
+            <div class="row">
+              <div class="col-lg-12 d-flex">
+                <div class="col-lg-3">
+                  <div class="card" style="width: 18rem">
+                    <img
+                      class="img-fluid shoehover scale-zoom"
+                      src="ASSETS/shoe 1.png"
+                      class="card-img-top"
+                      alt="image_shoe"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Nike Shoe</h5>
+                      <p class="card-text">Price : $25.00</p>
+                      <div class="rating">
+                        <i class="bi bi-star-fill at"></i>
+                        <i class="bi bi-star-fill at"></i>
+                        <i class="bi bi-star-fill at"></i>
+                        <i class="bi bi-star-half at"></i>
+                        <i class="bi bi-star at"></i>
+                      </div>
+                      <br />
+
+                      <a href="add.html" class="btn btn-warning">Add to Cart</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="card" style="width: 18rem">
+                    <img
+                      class="img-fluid shoehover scale-zoom"
+                      src="ASSETS/shoe_img3.png"
+                      class="card-img-top"
+                      alt="image_shoe"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Nike Shoe</h5>
+                      <p class="card-text">Price : $25.00</p>
+                      <div class="rating">
+                        <i class="bi bi-star-fill at"></i>
+                        <i class="bi bi-star-fill at"></i>
+                        <i class="bi bi-star-fill at"></i>
+                        <i class="bi bi-star-half at"></i>
+                        <i class="bi bi-star at"></i>
+                      </div>
+                      <br />
+
+                      <a href="#" class="btn btn-warning">Add to Cart</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="card" style="width: 18rem">
+                    <img
+                      class="img-fluid shoehover scale-zoom"
+                      src="ASSETS/shoe_img4.jpg"
+                      class="card-img-top"
+                      alt="image_shoe"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Nike Shoe</h5>
+                      <p class="card-text">Price : $25.00</p>
+                      <div class="rating">
+                        <i class="bi bi-star-fill at"></i>
+                        <i class="bi bi-star-fill at"></i>
+                        <i class="bi bi-star-fill at"></i>
+                        <i class="bi bi-star-half at"></i>
+                        <i class="bi bi-star at"></i>
+                      </div>
+                      <br />
+
+                      <a href="#" class="btn btn-warning">Add to Cart</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="card" style="width: 18rem">
+                    <img
+                      class="img-fluid shoehover scale-zoom"
+                      src="ASSETS/shoe_img5.png"
+                      class="card-img-top"
+                      alt="image_shoe"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Nike Shoe</h5>
+                      <p class="card-text">Price : $25.00</p>
+                      <div class="rating">
+                        <i class="bi bi-star-fill at"></i>
+                        <i class="bi bi-star-fill at"></i>
+                        <i class="bi bi-star-fill at"></i>
+                        <i class="bi bi-star-half at"></i>
+                        <i class="bi bi-star at"></i>
+                      </div>
+                      <br />
+
+                      <a href="#" class="btn btn-warning">Add to Cart</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container mt-5">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 d-flex d-sm-flex-none">
+                <div class="col-lg-3 col-md-3">
+                  <div class="card" style="width: 18rem">
+                    <img
+                      class="img-fluid shoehover scale-zoom"
+                      src="ASSETS/shoe_img2.png"
+                      class="card-img-top"
+                      alt="image_shoe"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Nike Shoe</h5>
+                      <p class="card-text">Price : $25.00</p>
+                      <div class="rating">
+                        <i class="bi bi-star-fill at"></i>
+                        <i class="bi bi-star-fill at"></i>
+                        <i class="bi bi-star-fill at"></i>
+                        <i class="bi bi-star-half at"></i>
+                        <i class="bi bi-star at"></i>
+                      </div>
+                      <br />
+
+                      <a href="#" class="btn btn-warning">Add to Cart</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                  <div class="card" style="width: 18rem">
+                    <img
+                      class="img-fluid shoehover scale-zoom"
+                      src="ASSETS/shoe_img2.png"
+                      class="card-img-top"
+                      alt="image_shoe"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Nike Shoe</h5>
+                      <p class="card-text">Price : $25.00</p>
+                      <div class="rating">
+                        <i class="bi bi-star-fill at"></i>
+                        <i class="bi bi-star-fill at"></i>
+                        <i class="bi bi-star-fill at"></i>
+                        <i class="bi bi-star-half at"></i>
+                        <i class="bi bi-star at"></i>
+                      </div>
+                      <br />
+
+                      <a href="#" class="btn btn-warning">Add to Cart</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                  <div class="card" style="width: 18rem">
+                    <img
+                      class="img-fluid shoehover scale-zoom"
+                      src="ASSETS/shoe_img2.png"
+                      class="card-img-top"
+                      alt="image_shoe"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Nike Shoe</h5>
+                      <p class="card-text">Price : $25.00</p>
+                      <div class="rating">
+                        <i class="bi bi-star-fill at"></i>
+                        <i class="bi bi-star-fill at"></i>
+                        <i class="bi bi-star-fill at"></i>
+                        <i class="bi bi-star-half at"></i>
+                        <i class="bi bi-star at"></i>
+                      </div>
+                      <br />
+
+                      <a href="#" class="btn btn-warning">Add to Cart</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                  <div class="card" style="width: 18rem">
+                    <img
+                      class="img-fluid shoehover scale-zoom"
+                      src="ASSETS/shoe_img2.png"
+                      class="card-img-top"
+                      alt="image_shoe"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Nike Shoe</h5>
+                      <p class="card-text">Price : $25.00</p>
+                      <div class="rating">
+                        <i class="bi bi-star-fill at"></i>
+                        <i class="bi bi-star-fill at"></i>
+                        <i class="bi bi-star-fill at"></i>
+                        <i class="bi bi-star-half at"></i>
+                        <i class="bi bi-star at"></i>
+                      </div>
+                      <br />
+
+                      <a href="#" class="btn btn-warning">Add to Cart</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- contact section -->
+    <div class="container-fluid">
+      <div class="container w-10">
+        <div class="row text-center mt-5 mb-5">
+          <h1>Contact us</h1>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <div class="input-group">
+              <span class="input-group-text">First and last name</span>
+              <input
+                type="text"
+                aria-label="First name"
+                class="form-control"
+                placeholder="Enter your First Name"
+              />
+              <input
+                type="text"
+                aria-label="Last name"
+                class="form-control"
+                placeholder="Enter your Last Name"
+              />
+            </div>
+            <br />
+            <div class="input-group flex-nowrap">
+              <span class="input-group-text" id="addon-wrapping">Mobile</span>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter your mobile number..."
+                aria-label="Username"
+                aria-describedby="addon-wrapping"
+              />
+            </div>
+            <div class="commen mt-4">
+              <textarea
+                style="resize: none"
+                name="comment"
+                id="cmmt"
+                cols="83"
+                rows="10"
+              >
+  Comment</textarea
+              >
+            </div>
+            <br />
+            <button type="submit" class="btn btn-success">Success</button>
+          </div>
+
+          <div class="col-6">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120073.20083671746!2d75.2227995193368!3d19.870077309045946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdb9815a369bc63%3A0x712d538b29a2a73e!2sAurangabad%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1706963702219!5m2!1sen!2sin"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div class="container-fluid bg-dark newheight mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-4 mt-5">
+            <div class="d-flex">
+              <img
+                class="img-fluid shoping"
+                src="ASSETS/Shopping.png"
+                alt="ASSETShopping"
+              />
+              <h1 class="text-white" style="padding-left: 15px; margin: 5px">
+                E-Mall
+              </h1>
+            </div>
+            <div>
+              <p class="text-white mt-3" id="ls">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Possimus dolore consequatur fuga dolor sunt magni? Facere et
+                corporis eligendi tempora velit earum voluptas! Impedit
+                repellendus nobis maiores sit quasi beatae!
+              </p>
+            </div>
+          </div>
+          <div class="col-4">
+            <h1>Usefulllinks</h1>
+            <br />
+            <h3>
+              <a style="text-decoration: none; color: white" href="">Home</a>
+            </h3>
+            <br />
+            <h3>
+              <a style="text-decoration: none; color: white" href="#about"
+                >About us</a
+              >
+            </h3>
+            <br />
+            <h3>
+              <a style="text-decoration: none; color: white" href=""
+                >Services</a
+              >
+            </h3>
+            <br />
+            <h3>
+              <a style="text-decoration: none; color: white" href="">Contact</a>
+            </h3>
+            <br />
+          </div>
+          <div class="col-4">
+            <p style="color: white">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+              consectetur facere voluptate praesentium voluptates et pariatur
+              quo, dicta in dignissimos delectus blanditiis, sunt, velit fuga at
+              nesciunt eaque ut dolore officiis aut necessitatibus esse odio? Ut
+              consequatur, praesentium expedita dignissimos nisi cum nesciunt
+              laborum quo officia porro, adipisci animi cupiditate, perferendis
+              earum velit quae architecto asperiores nostrum debitis fuga illo
+              optio? Praesentium minima laudantium, quaerat facilis sed vel.
+              Nulla explicabo voluptas quisquam aliquam incidunt in ea, quis
+              fuga, exercitationem ducimus quia, veritatis illo. Perferendis
+              sequi necessitatibus, dolorum aliquid corporis culpa beatae nihil
+              perspiciatis velit.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
